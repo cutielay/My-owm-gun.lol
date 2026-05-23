@@ -1,0 +1,252 @@
+:root{
+  --purple:#8b7cff;
+  --purple-2:#6f60ee;
+  --purple-dark:#201d3b;
+  --card:#211f3f;
+  --card-2:#18162d;
+  --text:#9186ff;
+  --glow:0 0 18px rgba(139,124,255,.85), 0 0 38px rgba(139,124,255,.35);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html,body{width:100%;min-height:100%;}
+
+body{
+  min-height:100vh;
+  overflow:hidden;
+  background:#000;
+  color:var(--text);
+  font-family:Inter,system-ui,sans-serif;
+}
+
+#stars{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+}
+
+.page{
+  position:relative;
+  z-index:1;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transform:translateY(-8px);
+  padding:22px;
+}
+
+.profile{
+  width:min(640px,92vw);
+  display:flex;
+  align-items:center;
+  gap:22px;
+  margin-bottom:48px;
+  filter:drop-shadow(0 0 12px rgba(139,124,255,.3));
+}
+
+.avatar{
+  width:86px;
+  height:86px;
+  position:relative;
+  flex:0 0 auto;
+}
+
+.avatar-head{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:var(--purple);
+  margin:0 auto;
+  box-shadow:var(--glow);
+}
+
+.avatar-body{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:38px;
+  background:var(--purple);
+  border-radius:32px 32px 10px 10px;
+  box-shadow:var(--glow);
+}
+
+.profile-text h1{
+  font-family:"Rubik Mono One",Inter,sans-serif;
+  font-size:clamp(22px,3.1vw,34px);
+  line-height:1;
+  letter-spacing:.5px;
+  color:var(--purple);
+  text-shadow:var(--glow);
+  white-space:nowrap;
+}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:2px;
+  margin-left:8px;
+  padding:4px 10px;
+  border-radius:999px;
+  font-family:Inter,sans-serif;
+  font-size:18px;
+  background:rgba(255,255,255,.12);
+  box-shadow:inset 0 0 15px rgba(255,255,255,.08), 0 0 18px rgba(139,124,255,.2);
+}
+
+.profile-text p{
+  margin-top:13px;
+  font-family:"Rubik Mono One",Inter,sans-serif;
+  font-size:12px;
+  color:var(--purple);
+  text-shadow:0 0 12px rgba(139,124,255,.85);
+}
+
+.profile-text span{
+  display:block;
+  margin-top:4px;
+  font-family:"Rubik Mono One",Inter,sans-serif;
+  font-size:8px;
+  color:rgba(145,134,255,.75);
+  text-shadow:0 0 8px rgba(139,124,255,.65);
+}
+
+.discord-card{
+  width:min(690px,94vw);
+  min-height:92px;
+  border-radius:26px;
+  background:linear-gradient(180deg,rgba(38,35,74,.96),rgba(25,23,48,.96));
+  border:2px solid rgba(139,124,255,.18);
+  box-shadow:0 8px 0 rgba(11,10,25,.55), inset 0 1px 0 rgba(255,255,255,.06), 0 0 24px rgba(139,124,255,.14);
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:13px 18px;
+  position:relative;
+}
+
+.server-icon{
+  width:64px;
+  height:64px;
+  border-radius:18px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(145deg,rgba(139,124,255,.22),rgba(139,124,255,.08));
+  color:var(--purple);
+  font-family:"Rubik Mono One";
+  font-size:32px;
+  text-shadow:var(--glow);
+}
+
+.server-info{margin-right:auto}
+.server-info h2{
+  font-family:"Rubik Mono One";
+  font-size:15px;
+  color:var(--purple);
+  text-shadow:0 0 12px rgba(139,124,255,.85);
+}
+
+.server-info p{
+  margin-top:6px;
+  font-family:"Rubik Mono One";
+  font-size:8px;
+  color:rgba(145,134,255,.85);
+}
+
+.online-dot{
+  display:inline-block;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#22c55e;
+  box-shadow:0 0 8px #22c55e;
+  vertical-align:middle;
+}
+
+.discord-mark{
+  position:absolute;
+  top:12px;
+  right:18px;
+  font-family:"Rubik Mono One";
+  font-size:10px;
+  color:rgba(145,134,255,.18);
+}
+
+.join-btn{
+  margin-top:17px;
+  text-decoration:none;
+  color:white;
+  font-family:"Rubik Mono One";
+  font-size:10px;
+  background:#22a447;
+  border-radius:9px;
+  padding:14px 22px;
+  box-shadow:inset 0 -2px 0 rgba(0,0,0,.18);
+  transition:.2s ease;
+}
+
+.join-btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
+
+.socials{
+  margin-top:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.socials a{
+  width:39px;
+  height:39px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  text-decoration:none;
+  color:var(--purple);
+  font-family:"Rubik Mono One",Inter,sans-serif;
+  font-size:25px;
+  text-shadow:var(--glow);
+  filter:drop-shadow(0 0 12px rgba(139,124,255,.7));
+  transition:.18s ease;
+}
+
+.socials a:hover{
+  transform:translateY(-4px) scale(1.08);
+  background:rgba(139,124,255,.14);
+}
+
+.socials .wing{
+  font-size:34px;
+  transform:rotate(-8deg);
+  color:#fff;
+}
+
+.socials .wing:last-child{transform:rotate(8deg) scaleX(-1)}
+
+.location{
+  width:min(690px,94vw);
+  margin-top:46px;
+  font-family:"Rubik Mono One";
+  font-size:11px;
+  color:var(--purple);
+  text-shadow:0 0 12px rgba(139,124,255,.75);
+  text-align:left;
+}
+
+@media (max-width:650px){
+  .profile{justify-content:center;gap:14px;margin-bottom:32px}
+  .avatar{width:64px;height:64px}
+  .avatar-head{width:32px;height:32px}
+  .avatar-body{height:28px}
+  .profile-text h1{font-size:18px;white-space:normal}
+  .profile-text p{font-size:8px}
+  .discord-card{border-radius:20px}
+  .server-icon{width:52px;height:52px}
+  .join-btn{padding:12px 16px}
+}
